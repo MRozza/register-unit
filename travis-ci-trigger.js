@@ -25,7 +25,7 @@ travis.authenticate(
           'Travis-API-Version': '3',
           Authorization: 'token Dukl6RIkyDQUMxG-nxSASg'
         },
-        url: 'https://travis-ci.org/MRozza%2Flogin-unit/requests',
+        url: 'https://api.travis-ci.org/MRozza%2Flogin-unit/requests',
         body: '{"request": {"branch":"master"}}'
       },
       function(error, response, body) {
