@@ -21,4 +21,3 @@ notifications:
     - mohamed.a.rozza@gmail.com
 after_success:
   - node travis-ci-trigger.js
-  - node app.js
