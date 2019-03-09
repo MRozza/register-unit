@@ -3,7 +3,7 @@ var Travis = require('travis-ci');
 var repo = 'https://github.com/MRozza/login-unit';
 
 var travis = new Travis({
-  version: '2.0.0'
+  version: '3.0.0'
 });
 
 travis.authenticate(
@@ -17,24 +17,23 @@ travis.authenticate(
     }
     console.log('auth res:' + JSON.stringify(res));
     console.log('repos :' + JSON.stringify(repos));
-    travis
-      .repos(repo.split('/')[0], repo.split('/')[1])
-      .builds.get(function(err, res) {
-        if (err) {
-          return console.error(err);
-        }
-
-        travis.requests.post(
-          {
-            build_id: res.builds[0].id
-          },
-          function(err, res) {
-            if (err) {
-              return console.error(err);
-            }
-            console.log('res: ' + res.flash[0].notice);
-          }
-        );
-      });
+    var request = require('request');
+    request.post(
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Travis-API-Version': '3',
+          Authorization: 'token xxxxxx'
+        },
+        url: 'https://travis-ci.org/MRozza%2Flogin-unit/requests',
+        body: '{    request: {    branch:master    }}'
+      },
+      function(error, response, body) {
+        if (error) console.error(error);
+        console.log('body: ' + body);
+        console.log('response: ' + response);
+      }
+    );
   }
 );
