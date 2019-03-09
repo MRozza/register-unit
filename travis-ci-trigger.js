@@ -16,7 +16,6 @@ travis.authenticate(
       return console.error(err);
     }
     console.log('auth res:' + JSON.stringify(res));
-    console.log('repos :' + JSON.stringify(repos));
     var request = require('request');
     request.post(
       {
