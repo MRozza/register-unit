@@ -15,7 +15,7 @@ travis.authenticate(
     if (err) {
       return console.error(err);
     }
-    console.log(res);
+    console.log('auth res:' + res);
 
     travis
       .repos(repo.split('/')[0], repo.split('/')[1])
@@ -32,7 +32,7 @@ travis.authenticate(
             if (err) {
               return console.error(err);
             }
-            console.log(res.flash[0].notice);
+            console.log('res: ' + res.flash[0].notice);
           }
         );
       });
