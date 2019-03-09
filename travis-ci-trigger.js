@@ -9,12 +9,13 @@ var travis = new Travis({
 travis.authenticate(
   {
     // available through Travis CI Account - settings
-    github_token: 'Dukl6RIkyDQUMxG-nxSASg'
+    access_token: 'Dukl6RIkyDQUMxG-nxSASg'
   },
   function(err, res) {
     if (err) {
       return console.error(err);
     }
+    console.log(res);
 
     travis
       .repos(repo.split('/')[0], repo.split('/')[1])
