@@ -21,13 +21,13 @@ con.connect(function(err) {
     console.log('Database created');
     con.query('use ci;');
     con.query(
-      `CREATE TABLE IF NOT EXISTS users (
-        id int NOT NULL AUTO_INCREMENT,
-        name varchar(50) NOT NULL,
-        user_name varchar(30) NOT NULL,
-        password varchar(32) NOT NULL,
-        PRIMARY KEY (id)
-        )`,
+      'CREATE TABLE IF NOT EXISTS users (' +
+        'id int NOT NULL AUTO_INCREMENT,' +
+        'name varchar(50) NOT NULL,' +
+        'user_name varchar(30) NOT NULL,' +
+        'password varchar(32) NOT NULL,' +
+        'PRIMARY KEY (id)' +
+        ')',
       function(err, result) {
         if (err) throw err;
         console.log('Table created');
