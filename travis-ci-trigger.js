@@ -23,7 +23,7 @@ travis.authenticate(
           'Content-Type': 'application/json',
           Accept: 'application/json',
           'Travis-API-Version': '3',
-          Authorization: 'token 3bb695d6134014dab636346f84d5cce3dbecf928'
+          Authorization: '3bb695d6134014dab636346f84d5cce3dbecf928'
         },
         url: 'https://travis-ci.org/MRozza%2Flogin-unit/requests',
         body: '{    request: {    branch:master    }}'
