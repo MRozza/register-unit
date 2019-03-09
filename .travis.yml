@@ -20,4 +20,5 @@ notifications:
     - moro52@ess.ais.ac.nz
     - mohamed.a.rozza@gmail.com
 after_success:
+  - echo "Trigger login-unit build..."
   - node travis-ci-trigger.js
