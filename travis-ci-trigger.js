@@ -3,7 +3,7 @@ var Travis = require('travis-ci');
 var repo = 'https://github.com/MRozza/login-unit';
 
 var travis = new Travis({
-  version: '3.0.0'
+  version: '2.0.0'
 });
 
 travis.authenticate(
@@ -24,7 +24,7 @@ travis.authenticate(
           'Content-Type': 'application/json',
           Accept: 'application/json',
           'Travis-API-Version': '3',
-          Authorization: 'token xxxxxx'
+          Authorization: 'token Dukl6RIkyDQUMxG-nxSASg'
         },
         url: 'https://travis-ci.org/MRozza%2Flogin-unit/requests',
         body: '{    request: {    branch:master    }}'
