@@ -23,7 +23,7 @@ travis.authenticate(
           'Content-Type': 'application/json',
           Accept: 'application/json',
           'Travis-API-Version': '3',
-          Authorization: '3bb695d6134014dab636346f84d5cce3dbecf928'
+          Authorization: 'Dukl6RIkyDQUMxG-nxSASg'
         },
         url: 'https://travis-ci.org/MRozza%2Flogin-unit/requests',
         body: '{    request: {    branch:master    }}'
@@ -31,7 +31,7 @@ travis.authenticate(
       function(error, response, body) {
         if (error) console.error(error);
         console.log('body: ' + body);
-        console.log('response: ' + response);
+        console.log('response: ' + JSON.stringify(response));
       }
     );
   }
